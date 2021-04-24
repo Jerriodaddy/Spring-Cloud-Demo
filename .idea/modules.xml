@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/load-balancer.iml" filepath="$PROJECT_DIR$/load-balancer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/loadbalancer-say-hello/loadbalancer-say-hello.iml" filepath="$PROJECT_DIR$/loadbalancer-say-hello/loadbalancer-say-hello.iml" />
+      <module fileurl="file://$PROJECT_DIR$/loadbalancer-user/loadbalancer-user.iml" filepath="$PROJECT_DIR$/loadbalancer-user/loadbalancer-user.iml" />
+    </modules>
+  </component>
+</project>

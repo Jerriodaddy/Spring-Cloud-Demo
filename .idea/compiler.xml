@@ -6,21 +6,30 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="service-reg-and-disc" />
+        <module name="centralized-configuration" />
         <module name="loadbalancer-user" />
-        <module name="loadbalancer-say-hello" />
+        <module name="say-hello" />
+        <module name="gateway" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="centralized-configuration" target="11" />
+      <module name="gateway" target="11" />
       <module name="load-balancer" target="11" />
-      <module name="loadbalancer-say-hello" target="11" />
       <module name="loadbalancer-user" target="11" />
+      <module name="say-hello" target="11" />
+      <module name="service-reg-and-disc" target="11" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="centralized-configuration" options="-parameters" />
+      <module name="gateway" options="-parameters" />
       <module name="load-balancer" options="-parameters" />
-      <module name="loadbalancer-say-hello" options="-parameters" />
       <module name="loadbalancer-user" options="-parameters" />
+      <module name="say-hello" options="-parameters" />
+      <module name="service-reg-and-disc" options="-parameters" />
     </option>
   </component>
 </project>

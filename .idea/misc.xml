@@ -6,6 +6,9 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/loadbalancer-say-hello/pom.xml" />
         <option value="$PROJECT_DIR$/loadbalancer-user/pom.xml" />
+        <option value="$PROJECT_DIR$/gateway/pom.xml" />
+        <option value="$PROJECT_DIR$/service-reg-and-disc/pom.xml" />
+        <option value="$PROJECT_DIR$/centralized-configuration/pom.xml" />
       </list>
     </option>
   </component>

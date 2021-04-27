@@ -16,7 +16,7 @@
 	<description>Demo project for Spring Cloud Load Balancer</description>
 
 	<modules>
-		<module>loadbalancer-say-hello</module>
+		<module>say-hello</module>
 		<module>loadbalancer-user</module>
 	</modules>
 

@@ -4,5 +4,8 @@ This project is for a practice of Spring Cloud.
 
 We write this project referring to the following articles:
 
-[Client-Side Load-Balancing with Spring Cloud LoadBalancer](https://spring.io/guides/gs/spring-cloud-loadbalancer/)
+1. [Getting Started with Spring Cloud Gateway](https://spring.io/blog/2019/06/18/getting-started-with-spring-cloud-gateway)
 
+2. [Client-Side Load-Balancing with Spring Cloud LoadBalancer](https://spring.io/guides/gs/spring-cloud-loadbalancer/)
+
+3. [Spring Cloud服务注册-Eureka介绍和部署](http://www.heartthinkdo.com/?p=1933)

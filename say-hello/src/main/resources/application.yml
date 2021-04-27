@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: say-hello
+  config:
+    import: optional:configserver:http://localhost:8888/
+
+server:
+  port: 8090
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/

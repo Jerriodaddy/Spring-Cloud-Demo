@@ -7,4 +7,8 @@ spring:
       server:
         git:
 #          uri: ${HOME}/Desktop/config
-           uri:
+           uri: https://github.com/Jerriodaddy/Spring-Cloud-Demo
+           search-paths: cloud_conf
+           deleteUntrackedBranches: true
+           skipSslValidation: true
+

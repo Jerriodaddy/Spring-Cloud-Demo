@@ -9,6 +9,7 @@ spring:
 #          uri: ${HOME}/Desktop/config
            uri: https://github.com/Jerriodaddy/Spring-Cloud-Demo
            search-paths: cloud_conf
+           default-label: main
            deleteUntrackedBranches: true
            skipSslValidation: true
 

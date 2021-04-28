@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.icewould</groupId>
-	<artifactId>load-balancer</artifactId>
+	<artifactId>spring-cloud-demo</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>load-balancer</name>
 	<packaging>pom</packaging>

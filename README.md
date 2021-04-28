@@ -9,3 +9,5 @@ We write this project referring to the following articles:
 2. [Client-Side Load-Balancing with Spring Cloud LoadBalancer](https://spring.io/guides/gs/spring-cloud-loadbalancer/)
 
 3. [Spring Cloud服务注册-Eureka介绍和部署](http://www.heartthinkdo.com/?p=1933)
+
+4. [Centralized Configuration](https://spring.io/guides/gs/centralized-configuration/)

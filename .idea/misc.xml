@@ -9,6 +9,7 @@
         <option value="$PROJECT_DIR$/gateway/pom.xml" />
         <option value="$PROJECT_DIR$/service-reg-and-disc/pom.xml" />
         <option value="$PROJECT_DIR$/centralized-configuration/pom.xml" />
+        <option value="$PROJECT_DIR$/oauth2-auth/pom.xml" />
       </list>
     </option>
   </component>

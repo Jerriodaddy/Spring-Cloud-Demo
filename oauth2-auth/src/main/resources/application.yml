@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: oauth2-auth
+  redis:
+    database: 0
+    port: 6379
+    host: localhost
+    password:

@@ -2,6 +2,7 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
@@ -9,13 +10,15 @@
         <module name="centralized-configuration" />
         <module name="service-reg-and-disc" />
         <module name="oauth2-auth" />
-        <module name="loadbalancer-user" />
+        <module name="common" />
         <module name="say-hello" />
+        <module name="loadbalancer-user" />
         <module name="gateway" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="centralized-configuration" target="11" />
+      <module name="common" target="11" />
       <module name="gateway" target="11" />
       <module name="loadbalancer-user" target="11" />
       <module name="oauth2-auth" target="11" />
@@ -27,6 +30,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="centralized-configuration" options="-parameters" />
+      <module name="common" options="-parameters" />
       <module name="gateway" options="-parameters" />
       <module name="loadbalancer-user" options="-parameters" />
       <module name="oauth2-auth" options="-parameters" />

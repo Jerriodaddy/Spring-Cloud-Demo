@@ -1,4 +1,4 @@
-package com.icewould.loadbalancer.sayhello;
+package com.icewould.sayhello;
 
 import java.util.Arrays;
 import java.util.List;

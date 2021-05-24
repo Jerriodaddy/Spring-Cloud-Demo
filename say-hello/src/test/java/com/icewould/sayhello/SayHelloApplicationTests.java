@@ -1,4 +1,4 @@
-package com.icewould.loadbalancer.sayhello;
+package com.icewould.sayhello;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

@@ -9,8 +9,10 @@ import java.util.ArrayList;
 import java.util.Collection;
 
 /**
- * 登录用户信息
- * Created by macro on 2020/6/19.
+ * @Description:
+ * @Author: Jerrio
+ * @Date: 5/15/21 4:47 PM
+ * @License: (C) Copyright 2021, IceWould Co., Ltd.
  */
 @Data
 public class SecurityUser implements UserDetails {

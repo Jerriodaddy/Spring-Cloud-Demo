@@ -7,7 +7,10 @@ import lombok.EqualsAndHashCode;
 import java.util.List;
 
 /**
- * Created by macro on 2020/6/19.
+ * @Description:
+ * @Author: Jerrio
+ * @Date: 5/15/21 4:47 PM
+ * @License: (C) Copyright 2021, IceWould Co., Ltd.
  */
 @Data
 @EqualsAndHashCode(callSuper = false)

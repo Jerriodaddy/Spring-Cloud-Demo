@@ -1,4 +1,4 @@
-package com.icewould.loadbalancer.sayhello;
+package com.icewould.sayhello.config;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;

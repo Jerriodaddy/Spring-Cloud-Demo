@@ -1,6 +1,6 @@
-package com.icewould.loadbalancer.sayhello;
+package com.icewould.sayhello.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import com.icewould.sayhello.config.CloudConf;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.PathVariable;

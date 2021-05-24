@@ -1,3 +1,5 @@
+server:
+  port: 9401
 spring:
   application:
     name: oauth2-auth
@@ -6,3 +8,5 @@ spring:
     port: 6379
     host: localhost
     password:
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss

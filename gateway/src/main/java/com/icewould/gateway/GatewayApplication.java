@@ -2,13 +2,16 @@ package com.icewould.gateway;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.cloud.gateway.route.RouteLocator;
 import org.springframework.cloud.gateway.route.builder.RouteLocatorBuilder;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 
-@SpringBootApplication
+@ComponentScan(basePackages = {"com.icewould","org.n3r.idworker"})
+@SpringBootApplication(exclude = DataSourceAutoConfiguration.class) //排除自动加载数据源类
 public class GatewayApplication {
 
     public static void main(String[] args) {

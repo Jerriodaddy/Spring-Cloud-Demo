@@ -6,7 +6,6 @@
         <groupId>com.icewould</groupId>
         <artifactId>spring-cloud-demo</artifactId>
         <version>0.0.1-SNAPSHOT</version>
-        <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <artifactId>gateway</artifactId>
     <version>0.0.1-SNAPSHOT</version>
@@ -38,6 +37,13 @@
         <dependency>
             <groupId>com.icewould</groupId>
             <artifactId>common</artifactId>
+            <exclusions>
+                <!-- 和 gateway 冲突 -->
+                <exclusion>
+                    <artifactId>spring-boot-starter-web</artifactId>
+                    <groupId>org.springframework.boot</groupId>
+                </exclusion>
+            </exclusions>
         </dependency>
 
         <dependency>
@@ -52,6 +58,7 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-contract-stub-runner</artifactId>
             <exclusions>
+                <!-- 和 gateway 冲突 -->
                 <exclusion>
                     <artifactId>spring-boot-starter-web</artifactId>
                     <groupId>org.springframework.boot</groupId>
@@ -74,11 +81,6 @@
         <dependency>
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-oauth2-jose</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.nimbusds</groupId>
-            <artifactId>nimbus-jose-jwt</artifactId>
-            <version>8.16</version>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>

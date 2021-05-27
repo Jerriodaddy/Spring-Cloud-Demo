@@ -6,7 +6,6 @@
         <groupId>com.icewould</groupId>
         <artifactId>spring-cloud-demo</artifactId>
         <version>0.0.1-SNAPSHOT</version>
-        <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
     <artifactId>oauth2-auth</artifactId>
@@ -56,6 +55,10 @@
             <groupId>cn.hutool</groupId>
             <artifactId>hutool-all</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.github.xiaoymin</groupId>
+            <artifactId>knife4j-spring-boot-starter</artifactId>
+        </dependency>
     </dependencies>
 
     <build>
@@ -66,5 +69,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>

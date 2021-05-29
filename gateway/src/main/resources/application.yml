@@ -7,13 +7,15 @@ spring:
     gateway:
       routes: #配置路由规则
         - id: say-hello-route
-          uri: lb://say-hello
+#          uri: lb://say-hello # 通过注册中心
+          uri: http://localhost:8090
           predicates:
             - Path=/api/**
           filters:
             - StripPrefix=1
         - id: oauth2-auth-route
-          uri: lb://oauth2-auth
+#          uri: lb://oauth2-auth # 通过注册中心
+          uri: http://localhost:9401
           predicates:
             - Path=/auth/**
           filters:
@@ -32,8 +34,31 @@ spring:
     port: 6379
     host: localhost
     password:
+
+#knife4j:
+#  enableAggregation: true
+#  cloud:
+#    enable: true
+#    routes:
+#      - name: say-hello
+#        uri: lb://say-hello
+#        location: /v2/api-docs
+#      - name: oauth2-auth
+#        uri: lb://oauth2-auth
+#        location: /v2/api-docs
 secure:
   ignore:
     urls: #配置白名单路径
+      - "/doc.html"
+      - "/swagger-resources/**"
+      - "/swagger/**"
+      - "/*/v2/api-docs"
+      - "/*/*.js"
+      - "/*/*.css"
+      - "/*/*.png"
+      - "/*/*.ico"
+      - "/webjars/**"
       - "/actuator/**"
-      - "/auth/oauth/token"
+      - "/auth/oauth2/hello"
+      - "/auth/oauth2/token"
+      - "/auth/rsa/publicKey"

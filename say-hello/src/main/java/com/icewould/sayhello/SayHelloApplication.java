@@ -9,12 +9,13 @@ import org.slf4j.LoggerFactory;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 
 @RestController
-@SpringBootApplication
+@SpringBootApplication(exclude = DataSourceAutoConfiguration.class) //排除自动加载数据源类
 public class SayHelloApplication {
     private static Logger log = LoggerFactory.getLogger(SayHelloApplication.class);
 

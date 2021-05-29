@@ -23,7 +23,7 @@ public class SwaggerConfig {
     public Docket defaultApi2() {
         Docket docket=new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(new ApiInfoBuilder()
-                        //.title("swagger-bootstrap-ui-demo RESTful APIs")
+                        .title("oauth2-auth APIs")
                         .description("# swagger-bootstrap-ui-demo RESTful APIs")
                         .termsOfServiceUrl("http://www.xx.com/")
                         .contact(new Contact("Jerry",
@@ -32,7 +32,7 @@ public class SwaggerConfig {
                         .version("1.0")
                         .build())
                 //分组名称
-                .groupName("1.X版本")
+//                .groupName("v1.0.0")
                 .select()
                 //这里指定Controller扫描包路径
                 .apis(RequestHandlerSelectors.basePackage("com.icewould.oauth2auth.controller"))

@@ -35,6 +35,8 @@ spring:
     host: localhost
     password:
 
+#可以通过引入 knife4j-aggregation-spring-boot-starter 直接配置接口文档集合
+#https://xiaoym.gitee.io/knife4j/action/aggregation-cloud.html
 #knife4j:
 #  enableAggregation: true
 #  cloud:
@@ -61,4 +63,5 @@ secure:
       - "/actuator/**"
       - "/auth/oauth2/hello"
       - "/auth/oauth2/token"
+      - "/auth/oauth/token"
       - "/auth/rsa/publicKey"

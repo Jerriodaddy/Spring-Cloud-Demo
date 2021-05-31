@@ -25,10 +25,13 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         http.authorizeRequests()
                 .requestMatchers(EndpointRequest.toAnyEndpoint()).permitAll()
                 .antMatchers("/rsa/publicKey").permitAll()
+                .antMatchers("/oauth/token").permitAll() // TODO: Test
                 .antMatchers("/oauth2/token").permitAll() // TODO: Test
                 .antMatchers("/oauth2/hello").permitAll() // TODO: Test
                 .antMatchers("/doc.html","/webjars/**","/img.icons/**","/swagger-resources/**","/v2/api-docs*").permitAll()
                 .anyRequest().authenticated();
+        // 允许post跨域
+        http.cors().and().csrf().disable();
     }
 
     @Bean

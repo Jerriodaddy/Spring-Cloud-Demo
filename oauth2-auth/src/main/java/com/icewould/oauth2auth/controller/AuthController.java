@@ -1,8 +1,12 @@
 package com.icewould.oauth2auth.controller;
 
+import com.github.xiaoymin.knife4j.annotations.DynamicParameter;
+import com.github.xiaoymin.knife4j.annotations.DynamicParameters;
 import com.icewould.common.utils.CommonResult;
 import com.icewould.oauth2auth.domain.Oauth2TokenDto;
 import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiImplicitParam;
+import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.oauth2.common.OAuth2AccessToken;
@@ -32,9 +36,18 @@ public class AuthController {
     /**
      * Oauth2登录认证
      */
-    @ApiOperation(value= "/token")
-    @RequestMapping(value = "/token", method = RequestMethod.POST)
+    @ApiOperation("Oauth2获取token")
+    @DynamicParameters(name = "postAccessToken", properties = {
+            @DynamicParameter(name = "grant_type", value = "授权模式", required = true),
+            @DynamicParameter(name = "client_id", value = "Oauth2客户端ID", required = true),
+            @DynamicParameter(name = "client_secret", value = "Oauth2客户端秘钥", required = true),
+            @DynamicParameter(name = "refresh_token", value = "刷新token"),
+            @DynamicParameter(name = "username", value = "登录用户名"),
+            @DynamicParameter(name = "password", value = "登录密码")
+    })
+    @PostMapping(value = "/token")
     public CommonResult<Oauth2TokenDto> postAccessToken(Principal principal, @RequestParam Map<String, String> parameters) throws HttpRequestMethodNotSupportedException {
+        System.out.println(principal);
         OAuth2AccessToken oAuth2AccessToken = tokenEndpoint.postAccessToken(principal, parameters).getBody();
         Oauth2TokenDto oauth2TokenDto = Oauth2TokenDto.builder()
                 .token(oAuth2AccessToken.getValue())
@@ -48,8 +61,11 @@ public class AuthController {
     /**
      * 测试接口
      */
-    @GetMapping("/hello")
-    public String hello() {
+    @ApiImplicitParams({
+            @ApiImplicitParam(name = "test", value = "测试参数", required = true),
+    })
+    @PostMapping("/hello")
+    public String hello(String test) {
         return "Hello World.";
     }
 }

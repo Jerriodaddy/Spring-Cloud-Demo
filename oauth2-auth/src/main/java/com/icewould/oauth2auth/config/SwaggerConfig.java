@@ -35,7 +35,7 @@ public class SwaggerConfig {
 //                .groupName("v1.0.0")
                 .select()
                 //这里指定Controller扫描包路径
-                .apis(RequestHandlerSelectors.basePackage("com.icewould.oauth2auth.controller"))
+//                .apis(RequestHandlerSelectors.basePackage("com.icewould.oauth2auth.controller"))
                 .paths(PathSelectors.any())
                 .build();
         return docket;
